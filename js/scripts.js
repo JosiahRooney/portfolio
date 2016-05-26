@@ -12,6 +12,14 @@ jQuery(function($) {
 					break;
 					case 2:
 					$('.about_link').addClass('active_link');
+					$('.about_me').delay(800).animate({
+						'opacity':1,
+						'top':'-50px'
+					},1200,function() {
+						$('.about_me_last').delay(1600).animate({
+							'opacity':1
+						},1200);
+					});
 					break;
 					case 3:
 					$('.work_link').addClass('active_link');
@@ -56,21 +64,11 @@ jQuery(function($) {
 		}
 		scrollWithArrowKeys();
 
-		// Lettering.js
-		//$('.site_title').lettering();
-
-		// Hover reveal drop downs
-		$('.skills > li').hover(function() {
-			$(this).find('.tips').slideDown();
-		}, function() {
-			$(this).find('.tips').delay(500).fadeOut();
-		});
-
 		// Reveal skills after page load
 		function revealSkills() {
 			$('.skills > li').delay(700).animate({
 				'opacity': 1,
-				'padding': '0 1.4%'
+				'margin': '0 2.5%'
 			}, 1600);
 		}
 		function revealHeader() {
@@ -80,12 +78,14 @@ jQuery(function($) {
 
 		function cycleThroughSkills() {
 			$('.skills > li').each(function(index) {
-				$(this).delay(500*index).animate({
-					'color': '#bf5d58'
-				},500);
 				$(this).animate({
-					'color': 'inherit'
-				},500);
+					'color': '#f20'
+				},500,function() {
+					$('.tips').fadeIn();
+					$(this).find('.tips li').each(function(index) {
+						$(this).delay(400*index).fadeIn();
+					});
+				});
 			});
 		}
 		cycleThroughSkills();

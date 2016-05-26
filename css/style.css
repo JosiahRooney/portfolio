@@ -1,10 +1,4 @@
-/* latin */
-@font-face {
-  font-family: 'Special Elite';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Special Elite"), local("SpecialElite-Regular"), url(https://fonts.gstatic.com/s/specialelite/v6/9-wW4zu3WNoD5Fjka35JmwYWpCd0FFfjqwFBDnEN0bM.woff2) format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
+@import url(../css/fonts.css);
 * {
   box-sizing: border-box;
   vertical-align: top; }
@@ -18,17 +12,57 @@ li {
   padding: 0;
   list-style: none; }
 
+p {
+  line-height: 1.5; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
 .section_1 {
-  background-color: #40a2a7; }
+  background-color: #40a2a7;
+  color: #fff; }
 
 .section_2 {
-  background-color: #ccb9ac; }
+  box-shadow: inset 0 125px 105px -55px rgba(0, 0, 0, 0.7);
+  background-image: url("../img/assault.png"); }
+  .section_2 .about_me {
+    color: #fff;
+    width: 60%;
+    margin: auto;
+    opacity: 0;
+    position: relative;
+    top: -30px; }
+    .section_2 .about_me h3 {
+      font-weight: 100;
+      font-size: 3rem;
+      text-align: center;
+      margin: 35px 0 18px; }
+    .section_2 .about_me p {
+      font-size: 1.4rem;
+      font-family: 'Alegreya Sans', sans-serif;
+      font-weight: 500;
+      width: 60%;
+      margin: auto;
+      margin-bottom: 20px; }
+  .section_2 .about_me_last {
+    opacity: 0; }
+  .section_2 .profile_pic {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin: auto;
+    display: block; }
 
 .section_3 {
   background-color: #46777a; }
 
+.section_4 {
+  background-color: #ccb9ac; }
+
 .header {
-  position: relative; }
+  position: relative;
+  margin-top: -230px; }
   .header .site_title {
     font-family: 'Special Elite', sans-serif;
     display: none;
@@ -55,17 +89,30 @@ li {
     text-shadow: 4px 5px 4px rgba(0, 0, 0, 0.5); }
   .header .skills {
     text-align: center;
-    text-shadow: 1px 1px 1px #630a0a; }
+    font-size: 1.2rem; }
+    .header .skills i {
+      font-size: 3.4rem; }
     .header .skills ul {
       text-align: left; }
   .header .skills > li {
     display: inline-block;
     padding: 0;
-    opacity: 0; }
+    opacity: 0;
+    padding-bottom: 2px;
+    position: relative; }
 
 .tips {
+  display: none;
   position: absolute;
-  display: none; }
+  border-top: 2px solid;
+  margin-top: 14px;
+  padding-top: 6px;
+  width: 100%; }
+  .tips li {
+    font-weight: 100;
+    margin-top: 8px;
+    display: none;
+    color: #fff; }
 
 .navigation {
   left: 0;
@@ -107,5 +154,11 @@ li {
     transition: 0.3s all;
     box-shadow: none;
     font-size: 1rem; }
+
+.social {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999; }
 
 /*# sourceMappingURL=style.css.map */
