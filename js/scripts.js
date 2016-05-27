@@ -23,12 +23,15 @@ jQuery(function($) {
 					break;
 					case 3:
 					$('.work_link').addClass('active_link');
+					fadeInGridItems();
 					break;
 					case 4:
 					$('.skills_link').addClass('active_link');
+					skillBars();
 					break;
 					case 5:
 					$('.contact_link').addClass('active_link');
+					setTimeout(function() {$('.shown').focus()},1000);
 					break;
 				}
 				window.onkeydown = function(e) {
@@ -79,7 +82,7 @@ jQuery(function($) {
 		function cycleThroughSkills() {
 			$('.skills > li').each(function(index) {
 				$(this).animate({
-					'color': '#f20'
+					'color': '#ff2220'
 				},500,function() {
 					$('.tips').fadeIn();
 					$(this).find('.tips li').each(function(index) {
@@ -87,19 +90,76 @@ jQuery(function($) {
 					});
 				});
 			});
+			console.log('cycleThroughSkills()');
 		}
 		cycleThroughSkills();
 
 		function fadeHeaderToWhite() {
 			$('.site_title').animate({
 				'color':'#fff'
-			},2000,function() {
-				$('.hidden_title').animate({
-					'opacity': 1
-				},2000);
-			});
+			},2000);
+			console.log('fadeHeaderToWhite()');
 		}
 		fadeHeaderToWhite();
+
+		var barsMade = false;
+		function skillBars() {
+			var arr = [
+				['js', 9.33, 5],
+				['php', 6.6, 4],
+				['ruby', 4.33, 1],
+				['python', 2.6, 1],
+				['jquery', 9.7, 5],
+				['css', 10, 6],
+				['html', 10, 13],
+				['wordpress', 8.33, 5],
+				['sql', 5.44, 2],
+				['oop', 4.33, 1],
+				['lamp',10, 8],
+				['sass', 6.66, 2]
+			]
+			
+			if ( barsMade === false ) {
+				for(var i = 0; i < arr.length; i++) {
+					$('.skill').eq(i).after('<div class="years">'+arr[i][2]+'</div>');
+				}
+				barsMade = true;
+			}
+			
+			setTimeout(function() {
+				for (var i = 0; i < arr.length; i++) {
+					var w = arr[i][1] * 10 +'%';
+					$('.skill .bar').eq(i).animate({
+						'width': w
+					},2000);
+				}
+			},1000);
+		};
+
+		function fadeInGridItems() {
+			setTimeout(function() {
+				$('.grid_item').each(function(i) {
+					$(this).delay(700*i).animate({
+						'opacity':1
+					}, 700)
+				});
+			},700);
+		}
+		
+		function showFormElements() {
+			$('.shown').on('input',function() {
+				$('.contact div input').delay(500).fadeIn(1500);
+			});
+			$('.shown_next').on('input',function() {
+				$('.contact div textarea').delay(500).fadeIn(1500);
+			});
+			$('.contact textarea').on('input',function() {
+				$('.contact button').delay(500).animate({
+					'opacity': 1
+				},1500);
+			});
+		}
+		showFormElements();
 
 	});
 });

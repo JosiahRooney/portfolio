@@ -76,16 +76,28 @@ a {
 	background-color: #46777a;
 
 	.work {
-		width: 75%;
-		margin: auto;
+		padding-top: 50px;
+		padding-bottom: 30px;
+		background-color: rgba(0,0,0,0.4);
+		
+		h3 {
+			font-weight: 100;
+			font-size: 2.3rem;
+			text-align: center;
+			margin: 0 auto 18px;
+			color: #fff;
+		}
 	}
 
 	.grid {
+		width: 75%;
+		margin: auto;
 		text-align: center;
 
 		.grid_item {
 			display: inline-block;
 			position: relative;
+			opacity: 0;
 			width: 27%;
 			height: 168px;
 			margin-bottom: 20px;
@@ -123,7 +135,132 @@ a {
 
 .section_4 {
 	background-color: #ccb9ac;
+	
+	.skills {
+		width: 75%;
+		margin: auto;
 
+		.top_row {
+
+			h3 {
+				font-size: 2rem;
+				margin: 0;
+				display: inline-block;
+				margin-bottom: 10px;
+			}
+			h3:first-child {
+				width: 90%;
+			}
+			h3:last-child {
+				text-align: center;
+				width: 9%;
+			}
+		}
+
+		.skill {
+			position: relative;
+			margin-bottom: 10px;
+			background-image: url('../img/assault.png');
+			background-repeat: repeat;
+			width: 90%;
+			display: inline-block;
+
+			.bar {
+				background-color: #FF2200;
+				height: 36px;
+				width: 0;
+			}
+			h3 {
+				position: absolute;
+				bottom: -8px;
+				margin: 0;
+				padding: 0;
+				left: 7px;
+				color: #CCB9AC;
+				font-size: 2rem;
+				text-shadow: 1px 1px 3px #000;
+			}
+		}
+		.years {
+			display: inline-block;
+			width: 9%;
+			font-size: 2rem;
+			font-weight: bold;
+			padding-top: 5px;
+			padding-left: 7px;
+			text-align: center;
+		}
+	}
+}
+
+.section_5 {
+	background-color: #695649;
+
+	.contact {
+		width: 75%;
+		margin: auto;
+
+		h3 {
+			color: #fff;
+			text-align: center;
+			font-weight: 100;
+			font-size: 2rem;
+		}
+
+		div {
+			margin: auto;
+			text-align: center;
+			margin-bottom: 10px;
+			height: 47px;
+
+			input {
+				width: 400px;
+				font-size: 1.5rem;
+				font-weight: 100;
+				padding: 8px;
+				display: none;
+				border: none;
+			}
+
+			textarea {
+				width: 400px;
+				padding: 8px;
+				font-size: 1.5rem;
+				font-weight: 100;
+				height: 180px;
+				display: none;
+				border: none;
+			}
+
+			input,
+			textarea {
+				color: #fff;
+				background-color: #695649;
+				border-bottom: 3px solid #998679;
+			}
+
+			.shown {
+				display: inline;
+			}
+		}
+
+		div:nth-child(4) {
+			height: 180px;
+		}
+
+		button {
+			width: 400px;
+			margin: auto;
+			display: block;
+			padding: 10px 0;
+			font-size: 1.2rem;
+			border: 0;
+			opacity: 0;
+			cursor: pointer;
+			background-color: #f20;
+			color: #fff;
+		}
+	}
 }
 
 .header {
@@ -142,20 +279,6 @@ a {
 		color: #f20;
 		top: -20px;
 		z-index: 9;
-	}
-
-	.hidden_title {
-		font-family: 'Special Elite', sans-serif;
-		text-align: center;
-		font-weight: 100;
-		font-size: 90px;
-		margin: 0;
-		margin-bottom: 30px;
-		width: 100%;
-		top: -20px;
-		opacity: 0;
-		position: absolute;
-		text-shadow: 4px 5px 4px rgba(0,0,0,0.5);
 	}
 
 	.skills {
@@ -266,7 +389,7 @@ a {
 			transition: 0.5s all;
 
 			&:hover {
-				color: rgba(255,255,255,1);
+				color: #f20;
 				background-color: rgba(0,0,0,0.4);
 				transition: 0.5s all;
 			}
