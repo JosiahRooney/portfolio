@@ -101,6 +101,7 @@ a {
 			width: 27%;
 			height: 168px;
 			margin-bottom: 20px;
+			overflow: hidden;
 
 			&:not(:nth-child(3n)) {
 				margin-right: 20px;
@@ -212,6 +213,7 @@ a {
 			text-align: center;
 			margin-bottom: 10px;
 			height: 47px;
+			width: 400px;
 
 			input {
 				width: 400px;
@@ -241,10 +243,25 @@ a {
 
 			.shown {
 				display: inline;
+				position: relative;
 			}
 		}
 
-		div:nth-child(4) {
+		.name_div {
+			position: relative;
+
+			span {
+				position: absolute;
+				color: white;
+				font-size: 1.5rem;
+				font-weight: 100;
+				padding: 8px 0 0;
+				display: inline-block;
+				left: -187px;
+			}
+		}
+
+		.message_div {
 			height: 180px;
 		}
 

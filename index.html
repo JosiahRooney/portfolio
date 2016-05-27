@@ -132,7 +132,7 @@
 				<img class="profile_pic" src="./img/profile.jpeg">
 				<h3>Hello!</h3>
 				<p>I am Josiah. I'm a front end developer from Santa Rosa, CA looking to expand my skillset in full stack development. My long-term goal is to be a game programmer for a company like Blizzard, Valve, or RockStar.</p>
-				<p class="about_me_last">I am the dad to two girls, I love gaming, and I have been involved with the web since the early 90s during its infancy. I am excited to see the direction we go with the Internet, AI, and virtual reality.</p>
+				<p class="about_me_last">I am a dad to two girls, I love gaming, and I have been involved with the web since the early 90s during its infancy. I am excited to see the direction we go with the Internet, AI, and virtual reality.</p>
 			</div>
 		</div>
 		<div class="section section_3">
@@ -257,16 +257,19 @@
 		<div class="section section_5">
 			<div class="contact">
 				<h3>Contact Me</h3>
-				<div>
-					<input class="shown" type="text" name="name" placeholder="name">
-				</div>
-				<div>
-					<input class="shown_next" type="text" name="email" placeholder="email">
-				</div>
-				<div>
-					<textarea name="message" placeholder="message"></textarea>
-				</div>
-				<button>Send <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+				<form id="contact_form" action="">
+					<div class="name_div">
+						<span>Please enter your </span>
+						<input class="shown" type="text" name="name" placeholder="name">
+					</div>
+					<div class="email_div">
+						<input class="shown_next" type="text" name="email" placeholder="email">
+					</div>
+					<div class="message_div">
+						<textarea name="message" placeholder="message"></textarea>
+					</div>
+					<button>Send <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+				</form>
 			</div>
 		</div>
 	</div>

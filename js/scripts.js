@@ -8,31 +8,31 @@ jQuery(function($) {
 				$('.active_link').removeClass('active_link');
 				switch(nextIndex) {
 					case 1:
-					$('.top_link').addClass('active_link');
-					break;
+						$('.top_link').addClass('active_link');
+						break;
 					case 2:
-					$('.about_link').addClass('active_link');
-					$('.about_me').delay(800).animate({
-						'opacity':1,
-						'top':'-50px'
-					},1200,function() {
-						$('.about_me_last').delay(1600).animate({
-							'opacity':1
-						},1200);
-					});
-					break;
+						$('.about_link').addClass('active_link');
+						$('.about_me').delay(600).animate({
+							'opacity':1,
+							'top':'-50px'
+						},1200,function() {
+							$('.about_me_last').delay(1600).animate({
+								'opacity':1
+							},1200);
+						});
+						break;
 					case 3:
-					$('.work_link').addClass('active_link');
-					fadeInGridItems();
-					break;
+						$('.work_link').addClass('active_link');
+						fadeInGridItems();
+						break;
 					case 4:
-					$('.skills_link').addClass('active_link');
-					skillBars();
-					break;
+						$('.skills_link').addClass('active_link');
+						skillBars();
+						break;
 					case 5:
-					$('.contact_link').addClass('active_link');
-					setTimeout(function() {$('.shown').focus()},1000);
-					break;
+						$('.contact_link').addClass('active_link');
+						setTimeout(function() {$('.shown').focus()},1000);
+						break;
 				}
 				window.onkeydown = function(e) {
 					if (e.keyCode == '38' || e.keyCode == '40') {
@@ -94,22 +94,14 @@ jQuery(function($) {
 		}
 		cycleThroughSkills();
 
-		function fadeHeaderToWhite() {
-			$('.site_title').animate({
-				'color':'#fff'
-			},2000);
-			console.log('fadeHeaderToWhite()');
-		}
-		fadeHeaderToWhite();
-
 		var barsMade = false;
 		function skillBars() {
 			var arr = [
-				['js', 9.33, 5],
+				['js', 8.33, 5],
 				['php', 6.6, 4],
 				['ruby', 4.33, 1],
 				['python', 2.6, 1],
-				['jquery', 9.7, 5],
+				['jquery', 9.2, 5],
 				['css', 10, 6],
 				['html', 10, 13],
 				['wordpress', 8.33, 5],
@@ -148,6 +140,7 @@ jQuery(function($) {
 		
 		function showFormElements() {
 			$('.shown').on('input',function() {
+				$('.name_div span').fadeOut('fast');
 				$('.contact div input').delay(500).fadeIn(1500);
 			});
 			$('.shown_next').on('input',function() {
@@ -160,6 +153,24 @@ jQuery(function($) {
 			});
 		}
 		showFormElements();
+
+		function hijackSubmit() {
+			$('#contact_form').on('submit',function(e) {
+				e.preventDefault();
+				$('#contact_form input, #contact_form textarea').val('').remove();
+				$('#contact_form button').remove();
+				$('#contact_form').prepend('<h3 style="height:0;color:#b9a699;">Thank you for your message.</h3>');
+			});
+		}
+		hijackSubmit();
+
+		function fadeHeaderToWhite() {
+			$('.site_title').animate({
+				'color':'#fff'
+			},2000);
+			console.log('fadeHeaderToWhite()');
+		}
+		fadeHeaderToWhite();
 
 	});
 });
