@@ -154,16 +154,6 @@ jQuery(function($) {
 		}
 		showFormElements();
 
-		function hijackSubmit() {
-			$('#contact_form').on('submit',function(e) {
-				e.preventDefault();
-				$('#contact_form input, #contact_form textarea').val('').remove();
-				$('#contact_form button').remove();
-				$('#contact_form').prepend('<h3 style="height:0;color:#b9a699;">Thank you for your message.</h3>');
-			});
-		}
-		hijackSubmit();
-
 		function fadeHeaderToWhite() {
 			$('.site_title').animate({
 				'color':'#fff'
@@ -171,6 +161,24 @@ jQuery(function($) {
 			console.log('fadeHeaderToWhite()');
 		}
 		fadeHeaderToWhite();
+
+		$('#contact_form').on('submit',function(e) {
+			e.preventDefault();
+			$.ajax({
+				type: 'POST',
+				url: 'mailer.php',
+				data: {
+					name: $('.name_div input').val(),
+					email: $('.email_div input').val(),
+					message: $('.message_div textarea').val()
+				},
+				success: function () {
+					$('#contact_form input, #contact_form textarea, #contact_form button').remove();
+					$('#contact_form').prepend('<h3>Thank you for your message!</h3>');
+				}
+			});
+		});
+
 
 	});
 });

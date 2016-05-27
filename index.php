@@ -2,8 +2,6 @@
 <html>
 <head>
 
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-
 	<title>Portfolio</title>
 
 	<!-- Stylesheets -->
@@ -257,7 +255,8 @@
 		<div class="section section_5">
 			<div class="contact">
 				<h3>Contact Me</h3>
-				<form id="contact_form" action="">
+
+				<form id="contact_form" method="post">
 					<div class="name_div">
 						<span>Please enter your </span>
 						<input class="shown" type="text" name="name" placeholder="name">
@@ -268,8 +267,9 @@
 					<div class="message_div">
 						<textarea name="message" placeholder="message"></textarea>
 					</div>
-					<button>Send <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+					<button id="submit_form" type="submit">Send <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
 				</form>
+
 			</div>
 		</div>
 	</div>
@@ -278,6 +278,6 @@
 	<script src="http://rooneydev.com/js/jquery.min.js"></script>
 	<script src="http://rooneydev.com/js/jquery.fullPage.min.js"></script>
 	<script src="http://rooneydev.com/js/jquery.lettering.js"></script>
-	<script src="http://rooneydev.com/js/scripts.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 </html>
