@@ -1,4 +1,4 @@
-@import '../css/fonts.css';
+@import 'http://rooneydev.com/css/fonts.css';
 
 /* Named Elements */
 
@@ -36,7 +36,7 @@ a {
 
 .section_2 {
 	box-shadow: inset 0 125px 105px -55px rgba(0,0,0,0.7);
-	background-image: url("../img/assault.png");
+	background-image: url("http://rooneydev.com/img/assault.png");
 
 	.about_me {
 		color: #fff;
@@ -165,7 +165,7 @@ a {
 		.skill {
 			position: relative;
 			margin-bottom: 10px;
-			background-image: url('../img/assault.png');
+			background-image: url('http://rooneydev.com/img/assault.png');
 			background-repeat: repeat;
 			width: 80%;
 			display: inline-block;

@@ -1,4 +1,4 @@
-@import url(../css/fonts.css);
+@import "http://rooneydev.com/css/fonts.css";
 /* Named Elements */
 * {
   box-sizing: border-box;
@@ -27,7 +27,7 @@ a {
 
 .section_2 {
   box-shadow: inset 0 125px 105px -55px rgba(0, 0, 0, 0.7);
-  background-image: url("../img/assault.png"); }
+  background-image: url("http://rooneydev.com/img/assault.png"); }
   .section_2 .about_me {
     color: #fff;
     width: 60%;
@@ -119,7 +119,7 @@ a {
     .section_4 .skills .skill {
       position: relative;
       margin-bottom: 10px;
-      background-image: url("../img/assault.png");
+      background-image: url("http://rooneydev.com/img/assault.png");
       background-repeat: repeat;
       width: 80%;
       display: inline-block; }
