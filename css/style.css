@@ -1,4 +1,5 @@
 @import url(../css/fonts.css);
+/* Named Elements */
 * {
   box-sizing: border-box;
   vertical-align: top; }
@@ -19,6 +20,7 @@ a {
   color: inherit;
   text-decoration: none; }
 
+/* Fullpage Pages */
 .section_1 {
   background-color: #40a2a7;
   color: #fff; }
@@ -102,24 +104,24 @@ a {
 .section_4 {
   background-color: #ccb9ac; }
   .section_4 .skills {
-    width: 75%;
+    width: 50%;
     margin: auto; }
     .section_4 .skills .top_row h3 {
       font-size: 2rem;
       margin: 0;
       display: inline-block;
-      margin-bottom: 10px; }
+      margin-bottom: 20px; }
     .section_4 .skills .top_row h3:first-child {
-      width: 90%; }
+      width: 80%; }
     .section_4 .skills .top_row h3:last-child {
       text-align: center;
-      width: 9%; }
+      width: 19%; }
     .section_4 .skills .skill {
       position: relative;
       margin-bottom: 10px;
       background-image: url("../img/assault.png");
       background-repeat: repeat;
-      width: 90%;
+      width: 80%;
       display: inline-block; }
       .section_4 .skills .skill .bar {
         background-color: #FF2200;
@@ -136,7 +138,7 @@ a {
         text-shadow: 1px 1px 3px #000; }
     .section_4 .skills .years {
       display: inline-block;
-      width: 9%;
+      width: 19%;
       font-size: 2rem;
       font-weight: bold;
       padding-top: 5px;
@@ -158,16 +160,16 @@ a {
       text-align: center;
       margin-bottom: 10px;
       height: 47px;
-      width: 400px; }
+      width: 500px; }
       .section_5 .contact div input {
-        width: 400px;
+        width: 500px;
         font-size: 1.5rem;
         font-weight: 100;
         padding: 8px;
         display: none;
         border: none; }
       .section_5 .contact div textarea {
-        width: 400px;
+        width: 500px;
         padding: 8px;
         font-size: 1.5rem;
         font-weight: 100;
@@ -195,7 +197,7 @@ a {
     .section_5 .contact .message_div {
       height: 180px; }
     .section_5 .contact button {
-      width: 400px;
+      width: 500px;
       margin: auto;
       display: block;
       padding: 10px 0;
